@@ -116,7 +116,7 @@ begin
   lbeFile.Text := OpenDialog1.FileName;
 
   FProcessHashThread := TProcessHashThread.Create(True);
-  FProcessHashThread.FreeOnTerminate := False;
+  FProcessHashThread.FreeOnTerminate := True;
   FProcessHashThread.OnTerminate := @ThreadTerminated;
   FProcessHashThread.FFilename := OpenDialog1.FileName;
   btnLoadFile.Enabled := False;
@@ -170,7 +170,9 @@ begin
   prbShaProcessing.Visible := False;
   btnStop.Visible := False;
   btnStop.Repaint;
-  FreeAndNil(FProcessHashThread);
+
+  if FProcessHashThread <> nil then
+    FProcessHashThread := nil;
 end;
 
 procedure TfrmSHA256CalcMain.tmrUpdateProgressBarTimer(Sender: TObject);
