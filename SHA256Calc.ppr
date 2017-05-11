@@ -2,6 +2,8 @@ program SHA256Calc;
 
 {$mode objfpc}{$H+}
 
+{$DEFINE UseCThreads}
+
 uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
   cthreads,
