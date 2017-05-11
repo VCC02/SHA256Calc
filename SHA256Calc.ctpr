@@ -22,16 +22,13 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <RequiredPackages Count="3">
+    <RequiredPackages Count="2">
       <Item1>
-        <PackageName Value="pl_indy"/>
+        <PackageName Value="pl_DCP"/>
       </Item1>
       <Item2>
-        <PackageName Value="pl_DCP"/>
-      </Item2>
-      <Item3>
         <PackageName Value="adLCL"/>
-      </Item3>
+      </Item2>
     </RequiredPackages>
     <Units Count="2">
       <Unit0>
